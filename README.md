@@ -9,3 +9,6 @@ S.no | Annotation | Link |
 7 | Prune Paths With Length Less Than K of a Binary Tree | [PrunePathsWithLengthLessThanK.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/PrunePathsWithLengthLessThanK.java) |
 8 | Prune Paths With Sum Less Than K of a Binary Tree | [PrunePathsWithSumLessThanK.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/PrunePathsWithSumLessThanK.java) |
 9 | Reverse Level Order Traversal | [ReverseLevelOrderTraversal.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/ReverseLevelOrderTraversal.java) |
+10 | XOR Linked List | [XORLinkedList.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/XORLinkedList.java) |
+11 | Merge Sort on Singly Linked List | [MergeSortOnSingleLinkedList.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/MergeSortOnSingleLinkedList.java) |
+12 | Find first missing positive number | [FindFirstMissingPositiveNumber.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/FindFirstMissingPositiveNumber.java) |
