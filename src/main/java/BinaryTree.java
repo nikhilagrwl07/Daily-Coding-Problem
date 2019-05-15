@@ -35,7 +35,7 @@ public class BinaryTree {
     }
 
 
-    static void levelOrderQueue(TreeNode root) {
+    static void levelOrderQueueIterative(TreeNode root) {
         if (root == null)
             return;
 

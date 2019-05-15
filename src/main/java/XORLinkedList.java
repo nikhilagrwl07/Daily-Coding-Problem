@@ -7,13 +7,11 @@ import java.util.Objects;
 public class XORLinkedList {
 
     private static Map<Integer, Node> addrToNodeMapping = new HashMap<>();
-    private static Map<Node, Integer> nodeToaddrMapping = new HashMap<>();
 
     public static void main(String[] args) {
 
         Node head = add(null, 10);
         add(head, 20);
-
         add(head, 40);
         add(head, 30);
         traverseXORLinkedList(head);
@@ -25,7 +23,6 @@ public class XORLinkedList {
         Node previous = null;
 
         Node newNode = new Node(value);
-        nodeToaddrMapping.put(newNode, newNode.hashCode());
         addrToNodeMapping.put(newNode.hashCode(), newNode);
 
         // First element to insert
@@ -37,14 +34,14 @@ public class XORLinkedList {
         while (temp != null) {
 
             if (temp.getXorAddr() == null) {
-                temp.setXorAddr(nodeToaddrMapping.get(newNode));
-                newNode.setXorAddr(nodeToaddrMapping.get(temp));
+                temp.setXorAddr(newNode.hashCode());
+                newNode.setXorAddr(temp.hashCode());
                 return newNode;
             } else {
                 Node current = temp;
 
-                if (nodeToaddrMapping.get(previous) != null) {
-                    temp = addrToNodeMapping.getOrDefault(temp.getXorAddr() ^ nodeToaddrMapping.get(previous), null);
+                if (previous != null) {
+                    temp = addrToNodeMapping.getOrDefault(temp.getXorAddr() ^ previous.hashCode(), null);
                 } else {
                     temp = addrToNodeMapping.getOrDefault(temp.getXorAddr(), null);
                 }
@@ -53,8 +50,8 @@ public class XORLinkedList {
             }
         }
 
-        previous.setXorAddr(nodeToaddrMapping.get(newNode) ^ previous.getXorAddr());
-        newNode.setXorAddr(nodeToaddrMapping.get(previous));
+        previous.setXorAddr(newNode.hashCode() ^ previous.getXorAddr());
+        newNode.setXorAddr(previous.hashCode());
         return newNode;
     }
 
@@ -71,8 +68,8 @@ public class XORLinkedList {
             } else {
                 Node current = temp;
 
-                if (nodeToaddrMapping.get(previous) != null) {
-                    temp = addrToNodeMapping.getOrDefault(temp.getXorAddr() ^ nodeToaddrMapping.get(previous), null);
+                if (previous != null) {
+                    temp = addrToNodeMapping.getOrDefault(temp.getXorAddr() ^ previous.hashCode(), null);
                 } else {
                     temp = addrToNodeMapping.getOrDefault(temp.getXorAddr(), null);
                 }

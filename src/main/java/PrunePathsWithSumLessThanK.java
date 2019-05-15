@@ -6,12 +6,12 @@ public class PrunePathsWithSumLessThanK {
         int sum = 19;
 
         System.out.println("Before pruning tree..");
-        BinaryTree.levelOrderQueue(root);
+        BinaryTree.levelOrderQueueIterative(root);
 
         prunePathsWithSumLessThanK(root, sum);
 
         System.out.println("After pruning tree..");
-        BinaryTree.levelOrderQueue(root);
+        BinaryTree.levelOrderQueueIterative(root);
 
     }
 

@@ -12,3 +12,8 @@ S.no | Annotation | Link |
 10 | XOR Linked List | [XORLinkedList.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/XORLinkedList.java) |
 11 | Merge Sort on Singly Linked List | [MergeSortOnSingleLinkedList.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/MergeSortOnSingleLinkedList.java) |
 12 | Find first missing positive number | [FindFirstMissingPositiveNumber.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/FindFirstMissingPositiveNumber.java) |
+13 | Verify two nodes are cousins and not siblings | [CousinNotSiblingInBinaryTree.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/CousinNotSiblingInBinaryTree.java) |
+14 | Decode custom encoded string | [DecodingEncodedString.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/DecodingEncodedString.java) |
+15 | Level order traversal of binary tree | [LevelOrderTraversal.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/LevelOrderTraversal.java) |
+16 | Spiral order traversal of binary tree | [SpiralOrderTraversalBinaryTree.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/SpiralOrderTraversalBinaryTree.java) |
+

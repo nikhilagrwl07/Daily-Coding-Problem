@@ -5,9 +5,9 @@ import java.util.List;
 
 public class SerializeAndDeserializeBinaryTree {
     public static void main(String[] args) {
-        TreeNode root = BinaryTree.buildSampleTree();
 
-        BinaryTree.levelOrderQueue(root);
+        TreeNode root = BinaryTree.buildSampleTree();
+        BinaryTree.levelOrderQueueIterative(root);
 
         List<Integer> serializedListOfTree = new ArrayList<>();
         serialize(root, serializedListOfTree);
@@ -16,7 +16,7 @@ public class SerializeAndDeserializeBinaryTree {
         System.out.println(serializedListOfTree);
 
         TreeNode rootOfDeserializeTree = deserialize(serializedListOfTree);
-        BinaryTree.levelOrderQueue(rootOfDeserializeTree);
+        BinaryTree.levelOrderQueueIterative(rootOfDeserializeTree);
     }
 
     private static void serialize(TreeNode root, List<Integer> list) {

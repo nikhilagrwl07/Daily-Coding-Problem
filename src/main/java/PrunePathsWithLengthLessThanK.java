@@ -6,12 +6,12 @@ public class PrunePathsWithLengthLessThanK {
         int length = 5;
 
         System.out.println("Before pruning tree..");
-        BinaryTree.levelOrderQueue(root);
+        BinaryTree.levelOrderQueueIterative(root);
 
         prunePathsWithLengthLessThanK(root, length);
 
         System.out.println("After pruning tree..");
-        BinaryTree.levelOrderQueue(root);
+        BinaryTree.levelOrderQueueIterative(root);
 
     }
 

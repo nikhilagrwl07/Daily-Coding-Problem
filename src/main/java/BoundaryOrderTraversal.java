@@ -7,7 +7,7 @@ public class BoundaryOrderTraversal {
 
     public static void main(String[] args) {
         TreeNode root = BinaryTree.buildSampleTree();
-        BinaryTree.levelOrderQueue(root);
+        BinaryTree.levelOrderQueueIterative(root);
 
         System.out.println("Boundary Order Traversal");
         boundaryOrderTraversal(root);
