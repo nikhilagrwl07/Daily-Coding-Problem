@@ -91,6 +91,10 @@ class TreeNode {
         return right;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public int getValue() {
         return value;
     }
