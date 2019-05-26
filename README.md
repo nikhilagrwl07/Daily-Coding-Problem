@@ -31,6 +31,17 @@ S.no | Annotation | Link |
 --- | --- | --- |
 1 | Find if there is a pair with target sum in an array | [FindPairsInArrayWithSumK.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/FindPairsInArrayWithSumK.java) |
 2 | Find first missing positive number | [FindFirstMissingPositiveNumber.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/FindFirstMissingPositiveNumber.java) |
+3 | Find longest substring with K distinct characters | [LongestSubStringWithKDistinctCharacters.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/LongestSubStringWithKDistinctCharacters.java) |
+4 | Find index of given key in sorted and rotated array | [BinarySearchOnRotatedArray.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/BinarySearchOnRotatedArray.java) |
+5 | Find all permutation of given array | [PermutationOfArray.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/PermutationOfArray.java) |
+6 | Find most closest element of given key in an array | [SearchingClosestElement.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/SearchingClosestElement.java) |
+7 | Nested Weighted Sum of an array | [NestedWeightedSum.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/NestedWeightedSum.java) |
+8 | Reversed Nested Weighted Sum of an array | [NestedWeightedSumReversal.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/NestedWeightedSumReversal.java) |
+9 | Alternatively arrange positive & negative number with ordering maintained in O(1) space   | [AlternateNegativePositiveNumberWithOrderMaintain.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/AlternateNegativePositiveNumberWithOrderMaintain.java) |
+10 | Alternatively arrange positive & negative number without maintaining ordering in O(1) space   | [AlternateNegativePositiveNumber.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/AlternateNegativePositiveNumber.java) |
+11 | In-Place QuickSort   | [QuickSort.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/QuickSort.java) |
+
+
 
 Trie | 
 --- |
@@ -47,6 +58,15 @@ S.no | Annotation | Link |
 --- | --- | --- |
 1 | Max Heap | [MaxHeap.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/MaxHeap.java) |
 
+Graph | 
+--- |
+
+S.no | Annotation | Link | 
+--- | --- | --- |
+1 | DFS | [MaxHeap.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/DFS.java) |
+1 | BFS | [BFS.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/BFS.java) |
+
+
 
 Miscellaneous | 
 --- |
@@ -55,3 +75,4 @@ S.no | Annotation | Link |
 --- | --- | --- |
 1 | Decode custom encoded string | [DecodingEncodedString.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/DecodingEncodedString.java) |
 2 | Different paths to climb stair | [NWaysToClimbStairs.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/NWaysToClimbStairs.java) |
+3 | Find Square Root of a number using binary search | [SquareRootUsingBinarySearch.java](https://github.com/nikhilagrwl07/Daily-Coding-Problem/blob/master/src/main/java/SquareRootUsingBinarySearch.java) |

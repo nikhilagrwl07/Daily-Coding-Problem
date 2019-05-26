@@ -1,25 +1,27 @@
 package main.java;
 
-    public class MaxHeap {
+public class MaxHeap {
     public static void main(String[] args) {
 
-        int[] a = {-1, 10, 4, 1, 30, 100, 60, 79};
+        int[] a = {-1, 10, 4, 1, 30, 100, 60};
 
-        buildMaxHeap(a, a.length - 1, (a.length - 1) / 2);
+        buildMaxHeap(a);
 
-        print(a);
+        print(a, "Before Heap Sort. Only Build Max Heap");
 
         heapsort(a);
 
-        print(a);
+        print(a, "After Heap Sort");
 
     }
 
-    private static void print(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
+    private static void buildMaxHeap(int[] a) {
+        int indexFromEndToZero = (a.length - 1) / 2;
+
+        for (; indexFromEndToZero >= 0; indexFromEndToZero--) {
+            heapifyTopDownApproach(a, a.length - 1, indexFromEndToZero);
         }
-        System.out.println();
+
     }
 
     private static void heapsort(int[] a) {
@@ -27,15 +29,15 @@ package main.java;
             return;
         }
 
-        for (int i = a.length - 1; i >= 0; i--) {
+        for (int heaplength = a.length - 1; heaplength >= 0; heaplength--) {
 
-            swap(a, 0, i);
-            buildMaxHeap(a, i - 1, 0);
+            swap(a, 0, heaplength);
+            heapifyTopDownApproach(a, heaplength - 1, 0);
         }
 
     }
 
-    private static void buildMaxHeap(int[] a, int totalLength, int index) {
+    private static void heapifyTopDownApproach(int[] a, int totalLength, int index) {
 
 
         for (; index >= 0; index--) {
@@ -49,7 +51,7 @@ package main.java;
 
             if (largestIndex != index) {
                 swap(a, largestIndex, index);
-                buildMaxHeap(a, totalLength, largestIndex);
+                heapifyTopDownApproach(a, totalLength, largestIndex);
             }
         }
 
@@ -67,5 +69,14 @@ package main.java;
 
     private static int getRight(int index) {
         return 2 * index + 2;
+    }
+
+
+    private static void print(int[] a, String msg) {
+        System.out.println(msg);
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
     }
 }
