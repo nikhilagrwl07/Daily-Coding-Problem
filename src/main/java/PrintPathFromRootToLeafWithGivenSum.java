@@ -25,7 +25,7 @@ public class PrintPathFromRootToLeafWithGivenSum {
         int newSum = sum - root.getValue();
         path[pathLength] = root.getValue();
 
-        if(newSum==0 && isLeaf(root)){
+        if (newSum == 0 && isLeaf(root)) {
             printPath(path, pathLength);
         }
         printPathWithSumKUtil(root.getLeft(), path, pathLength + 1, newSum);
@@ -34,7 +34,7 @@ public class PrintPathFromRootToLeafWithGivenSum {
     }
 
     private static boolean isLeaf(TreeNode root) {
-        return root.getLeft()==null && root.getRight()==null;
+        return root.getLeft() == null && root.getRight() == null;
     }
 
     private static void printPath(int[] path, int pathLength) {

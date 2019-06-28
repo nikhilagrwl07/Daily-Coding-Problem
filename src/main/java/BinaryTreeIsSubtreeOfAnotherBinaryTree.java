@@ -9,10 +9,9 @@ public class BinaryTreeIsSubtreeOfAnotherBinaryTree {
 
         TreeNode findRootOfSubTreeInParentTree = findRootOfSubTreeInParentTree(root, subtreeRootNode);
 
-        if(isSubTree(findRootOfSubTreeInParentTree, subtreeRootNode)){
+        if (isSubTree(findRootOfSubTreeInParentTree, subtreeRootNode)) {
             System.out.println("is subtree!!");
-        }
-        else
+        } else
             System.out.println("Not subtree!!");
 
     }
@@ -24,7 +23,7 @@ public class BinaryTreeIsSubtreeOfAnotherBinaryTree {
         if (parent != null && child == null)
             return true;
 
-        if(parent == null && child != null)
+        if (parent == null && child != null)
             return false;
 
 
@@ -37,18 +36,15 @@ public class BinaryTreeIsSubtreeOfAnotherBinaryTree {
 
     }
 
-    private static TreeNode findRootOfSubTreeInParentTree(TreeNode parentRoot, TreeNode childRoot){
-        if(parentRoot == null || childRoot == null)
+    private static TreeNode findRootOfSubTreeInParentTree(TreeNode parentRoot, TreeNode childRoot) {
+        if (parentRoot == null || childRoot == null)
             return null;
 
-        if(parentRoot != null && parentRoot.getValue() == childRoot.getValue())
-        {
+        if (parentRoot != null && parentRoot.getValue() == childRoot.getValue()) {
             return parentRoot;
-        }
-        else
-        {
+        } else {
             TreeNode leftSubtreeResult = findRootOfSubTreeInParentTree(parentRoot.getLeft(), childRoot);
-            if(leftSubtreeResult==null)
+            if (leftSubtreeResult == null)
                 return findRootOfSubTreeInParentTree(parentRoot.getRight(), childRoot);
             else
                 return leftSubtreeResult;

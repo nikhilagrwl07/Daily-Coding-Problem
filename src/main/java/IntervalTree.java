@@ -1,5 +1,3 @@
-
-
 package main.java;
 
 
@@ -48,6 +46,34 @@ class InternalNode {
 }
 
 public class IntervalTree {
+
+    public static void main(String args[]) {
+        IntervalTree it = new IntervalTree();
+        InternalNode root = null;
+        root = it.insert(root, 10, 15);
+        System.out.println("root.max = " + root.max);
+        root = it.insert(root, 11, 13);
+
+        System.out.println("root.max = " + root.max);
+        root = it.insert(root, 18, 21);
+        System.out.println("root.max = " + root.max);
+
+//        root = it.insert(root, 20, 30);
+        root = it.insert(root, 21, 25);
+        System.out.println("root.max = " + root.max);
+//    System.out.println("root.low = " + root.right.right.right.right.max);
+
+        root = it.insert(root, 0, 7);
+        System.out.println("root.max = " + root.max);
+
+        System.out.println(it.isOverlap(root, 7, 9));
+//        System.out.println(it.isOverlap(root, 11, 18));
+//        System.out.println(it.isOverlap(root, 21, 22));
+//        System.out.println(it.isOverlap(root, 12, 18));
+//        System.out.println(it.isOverlap(root, 24, 26));
+        System.out.println("total count = " + it.isOverlapWithCount(root, 10, 25));
+        //total count = 4
+    }
 
     private InternalNode insert(InternalNode root, int low, int high) {
 
@@ -100,34 +126,6 @@ public class IntervalTree {
         } else {
             return isOverlapWithCount(root.right, low, high);
         }
-    }
-
-    public static void main(String args[]) {
-        IntervalTree it = new IntervalTree();
-        InternalNode root = null;
-        root = it.insert(root, 10, 15);
-        System.out.println("root.max = " + root.max);
-        root = it.insert(root, 11, 13);
-
-        System.out.println("root.max = " + root.max);
-        root = it.insert(root, 18, 21);
-        System.out.println("root.max = " + root.max);
-
-//        root = it.insert(root, 20, 30);
-        root = it.insert(root, 21, 25);
-        System.out.println("root.max = " + root.max);
-//    System.out.println("root.low = " + root.right.right.right.right.max);
-
-        root = it.insert(root, 0, 7);
-        System.out.println("root.max = " + root.max);
-
-        System.out.println(it.isOverlap(root, 7, 9));
-//        System.out.println(it.isOverlap(root, 11, 18));
-//        System.out.println(it.isOverlap(root, 21, 22));
-//        System.out.println(it.isOverlap(root, 12, 18));
-//        System.out.println(it.isOverlap(root, 24, 26));
-        System.out.println("total count = " + it.isOverlapWithCount(root, 10, 25));
-        //total count = 4
     }
 
 }

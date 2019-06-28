@@ -13,7 +13,7 @@ public class NWaysToClimbStairs {
     private static void NwayToClimbStairs(int[] paths, int upperIndex, int[] steps, int totalSum) {
 
         if (totalSum == 0) {
-            for (int i = 0; i <= upperIndex-1; i++) {
+            for (int i = 0; i <= upperIndex - 1; i++) {
                 System.out.print(paths[i] + " , ");
             }
             System.out.println();

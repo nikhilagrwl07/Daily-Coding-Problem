@@ -1,8 +1,5 @@
 package main.java;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class FindPairsInArrayWithSumK {
 
     //10, 15, 3, 7
@@ -104,7 +101,7 @@ public class FindPairsInArrayWithSumK {
 
     // Approach #2 - Using HashSet --> this method will fail in case duplicate. Will work ony with Hashtable
     // where key is element of given array , value is frequency of occurrence of element
-    public boolean isPairWithSumKPresentUsingHashSet(int[] a, int sum){
+    public boolean isPairWithSumKPresentUsingHashSet(int[] a, int sum) {
         return false;
     }
 }

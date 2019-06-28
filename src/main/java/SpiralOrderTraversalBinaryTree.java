@@ -27,12 +27,11 @@ public class SpiralOrderTraversalBinaryTree {
         if (level == 1) {
             System.out.print(root.getValue() + " ");
         } else {
-            if(isReverse) // R --> L
+            if (isReverse) // R --> L
             {
                 printCurrentLevelRecursive(root.getRight(), level - 1, isReverse);
                 printCurrentLevelRecursive(root.getLeft(), level - 1, isReverse);
-            }
-            else { // L --> R
+            } else { // L --> R
                 printCurrentLevelRecursive(root.getLeft(), level - 1, isReverse);
                 printCurrentLevelRecursive(root.getRight(), level - 1, isReverse);
             }

@@ -23,14 +23,6 @@ class Graph {
     private int vertexCount;
     private LinkedList<Integer>[] graph;
 
-    public int getVertexCount() {
-        return vertexCount;
-    }
-
-    public LinkedList<Integer>[] getGraph() {
-        return graph;
-    }
-
     public Graph(int nodeCount) {
         this.vertexCount = nodeCount;
 
@@ -41,6 +33,13 @@ class Graph {
         }
     }
 
+    public int getVertexCount() {
+        return vertexCount;
+    }
+
+    public LinkedList<Integer>[] getGraph() {
+        return graph;
+    }
 
     void addEdge(int source, int destination) {
         graph[source].add(destination);

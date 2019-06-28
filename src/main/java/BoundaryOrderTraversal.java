@@ -1,8 +1,5 @@
 package main.java;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class BoundaryOrderTraversal {
 
     public static void main(String[] args) {
@@ -32,12 +29,11 @@ public class BoundaryOrderTraversal {
     }
 
     private static void rightView(TreeNode root) {
-        if(root!=null){
-            if(root.getRight() != null){
+        if (root != null) {
+            if (root.getRight() != null) {
                 rightView(root.getRight());
                 System.out.print(root.getValue() + " ");
-            }
-            else if (root.getLeft() !=null){
+            } else if (root.getLeft() != null) {
                 rightView(root.getLeft());
                 System.out.print(root.getValue() + " ");
             }
@@ -50,8 +46,7 @@ public class BoundaryOrderTraversal {
             if (root.getLeft() != null) {
                 System.out.print(root.getValue() + " "); // printing node before calling it's left node to follow top down approach
                 leftView(root.getLeft());
-            }
-            else if(root.getRight()!=null){
+            } else if (root.getRight() != null) {
                 System.out.print(root.getValue() + " "); // printing node before calling it's right node to follow top down approach
                 leftView(root.getRight());
             }
@@ -69,7 +64,6 @@ public class BoundaryOrderTraversal {
 
         bottomView(root.getRight());
     }
-
 
 
 }

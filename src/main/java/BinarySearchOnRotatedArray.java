@@ -24,9 +24,9 @@ public class BinarySearchOnRotatedArray {
 
 
         if (a[0] <= key && key < a[pivotIndex]) {
-            return binarySearch(a, 0, pivotIndex-1, key);
+            return binarySearch(a, 0, pivotIndex - 1, key);
         } else
-            return binarySearch(a, pivotIndex+1, a.length-1, key);
+            return binarySearch(a, pivotIndex + 1, a.length - 1, key);
     }
 
     private static int binarySearch(int[] a, int lower, int higher, int key) {

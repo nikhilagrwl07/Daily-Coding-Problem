@@ -22,7 +22,7 @@ public class LongestSubStringWithKDistinctCharacters {
         System.out.println(longestSubStringWithKDistinctCharactersSlidingApproach(k, s.toCharArray()));
     }
 
-//  Time Complexity - O(n)
+    //  Time Complexity - O(n)
 //  Space Complexity - O(number of distinct characters)  ~O(1)
     private static String longestSubStringWithKDistinctCharactersSlidingApproach(int k, char[] input) {
         int start = 0;
@@ -46,56 +46,50 @@ public class LongestSubStringWithKDistinctCharacters {
         }
 
 
-
         // Sliding Logic
-        while (start<=input.length-1){
-             int currentCount = getTotalDistinctCount(freqMap);
-             char key = input[start];
+        while (start <= input.length - 1) {
+            int currentCount = getTotalDistinctCount(freqMap);
+            char key = input[start];
 
-             if(currentCount < k){
-                 longestSubString.append(key);
+            if (currentCount < k) {
+                longestSubString.append(key);
 
-                 if (freqMap.containsKey(key)) {
-                     Integer count = freqMap.get(key);
-                     freqMap.put(key, count + 1);
-                 } else {
-                     freqMap.put(key, 1);
-                 }
+                if (freqMap.containsKey(key)) {
+                    Integer count = freqMap.get(key);
+                    freqMap.put(key, count + 1);
+                } else {
+                    freqMap.put(key, 1);
+                }
+            } else {
+                longestSubString.append(key);
+                int count;
+
+                if (freqMap.containsKey(key)) {
+                    count = freqMap.get(key);
+                    freqMap.put(key, count + 1);
+
+                    if (longestMax.length() < longestSubString.length()) {
+                        longestMax = longestSubString.toString();
+                    }
+
+                    start++;
+                    continue;
+                } else {
+                    freqMap.put(key, 1);
+                }
+
+                char firstElement = longestSubString.charAt(0);
+                longestSubString.deleteCharAt(0);
+
+                count = freqMap.get(firstElement);
+                if (count == 1) {
+                    freqMap.remove(firstElement);
+                } else {
+                    freqMap.put(key, count - 1);
+                }
+
+
             }
-             else
-             {
-                 longestSubString.append(key);
-                 int count;
-
-                 if (freqMap.containsKey(key)) {
-                     count = freqMap.get(key);
-                     freqMap.put(key, count + 1);
-
-                     if(longestMax.length() < longestSubString.length()){
-                         longestMax = longestSubString.toString();
-                     }
-
-                     start++;
-                     continue;
-                 } else {
-                     freqMap.put(key, 1);
-                 }
-
-                 char firstElement = longestSubString.charAt(0);
-                 longestSubString.deleteCharAt(0);
-
-                 count = freqMap.get(firstElement);
-                 if(count==1)
-                 {
-                     freqMap.remove(firstElement);
-                 }
-                 else
-                 {
-                     freqMap.put(key, count - 1);
-                 }
-
-
-             }
             start++;
 
         }
@@ -103,7 +97,7 @@ public class LongestSubStringWithKDistinctCharacters {
 
     }
 
-    private static int getTotalDistinctCount(Map<Character, Integer> freqMap){
+    private static int getTotalDistinctCount(Map<Character, Integer> freqMap) {
 
         return freqMap.keySet().size();
 

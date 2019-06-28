@@ -95,12 +95,12 @@ public class XORLinkedList {
             return value;
         }
 
-        public Integer getXorAddr() {
-            return xorAddr;
-        }
-
         public void setValue(int value) {
             this.value = value;
+        }
+
+        public Integer getXorAddr() {
+            return xorAddr;
         }
 
         public void setXorAddr(Integer xorAddr) {

@@ -28,7 +28,7 @@ public class NestedWeightedSum {
                 currentLevelCount--;
                 continue;
             }
-            if(ch == ','){
+            if (ch == ',') {
                 continue;
             }
             totalSum += currentLevelCount * (ch - '0');

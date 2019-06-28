@@ -54,6 +54,6 @@ public class NestedWeightedSumReversal {
                 currentLevelCount++;
             }
         }
-        return currentLevelCount+1;
+        return currentLevelCount + 1;
     }
 }

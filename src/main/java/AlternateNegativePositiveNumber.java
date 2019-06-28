@@ -52,7 +52,7 @@ public class AlternateNegativePositiveNumber {
         int newLeft = 0;
         int newRight = right;
         int currentIndex = 0;
-        while (newLeft <= right - 1 && newRight <= a.length - 1 && currentIndex< a.length) {
+        while (newLeft <= right - 1 && newRight <= a.length - 1 && currentIndex < a.length) {
 
             if (currentIndex % 2 == 0) { // even
                 int temp = a[currentIndex];

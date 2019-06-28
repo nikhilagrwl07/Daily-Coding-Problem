@@ -24,19 +24,16 @@ public class ExpressionOperators {
         }
 
         for (int i = 0; i < inputChar.length; i++) {
-            if(resultIndex ==0)
-            {
+            if (resultIndex == 0) {
                 result[resultIndex] = inputChar[i];
-            }
-            else
-            {
+            } else {
                 result[++resultIndex] = inputChar[i];
             }
 
 
             for (int j = 0; j < operators.length && (resultIndex < result.length - 1); j++) {
 
-                result[resultIndex+1] = operators[j];
+                result[resultIndex + 1] = operators[j];
                 generateExpression(inputChar, operators, result, resultIndex + 1, target);
             }
 

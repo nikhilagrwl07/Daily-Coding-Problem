@@ -34,9 +34,9 @@ public class FindFirstMissingPositiveNumber {
         for (int i = 0; i <= endingIndexOfPositiveNumber; i++) {
 
             int numberAti = Math.abs(a[i]); // Very important to note Math.abs() as value at index i could have been changed previously
-                                            // before reaching there with index i
-            if (numberAti > 0 && (numberAti - 1) <= a.length - 1) {
-                a[numberAti - 1] = -a[numberAti - 1];
+            // before reaching there with index i
+            if (numberAti >= 1 && numberAti <= a.length) {
+                a[numberAti - 1] = a[numberAti - 1] * -1;
             }
         }
 

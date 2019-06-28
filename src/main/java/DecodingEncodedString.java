@@ -33,7 +33,7 @@ public class DecodingEncodedString {
             for (int i = 0; i <= currentIndex - 1; i++)
                 stringBuilder.insert(0, result[i]);
 
-            if(!set.contains(stringBuilder.toString())){
+            if (!set.contains(stringBuilder.toString())) {
                 System.out.println(stringBuilder.toString());
                 set.add(stringBuilder.toString());
             }
@@ -48,8 +48,7 @@ public class DecodingEncodedString {
 
             Character moduloMapping = intToCharMapping.get(modulo);
 
-            if(moduloMapping!=null)
-            {
+            if (moduloMapping != null) {
                 result[currentIndex] = moduloMapping;
                 decode(remaining, currentIndex + 1, result, set);
             }

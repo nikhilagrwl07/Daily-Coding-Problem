@@ -20,16 +20,14 @@ public class ReverseLevelOrderTraversal {
     }
 
     private static void printNodeAtGivenLevel(TreeNode root, int level) {
-        if(root==null)
+        if (root == null)
             return;
 
-        if(level==1){
+        if (level == 1) {
             System.out.print(root.getValue() + " ");
-        }
-        else
-        {
-            printNodeAtGivenLevel(root.getLeft(), level-1);
-            printNodeAtGivenLevel(root.getRight(), level-1);
+        } else {
+            printNodeAtGivenLevel(root.getLeft(), level - 1);
+            printNodeAtGivenLevel(root.getRight(), level - 1);
         }
 
     }

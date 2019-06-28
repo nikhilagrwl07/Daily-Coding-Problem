@@ -14,8 +14,7 @@ public class HalfAndFullNodesInBinaryTree {
         int count = 0;
 
         if ((root.getLeft() == null && root.getRight() != null)
-            || (root.getLeft() != null && root.getRight() == null))
-        {
+                || (root.getLeft() != null && root.getRight() == null)) {
             count++;
         }
         return count + numberOfHalfNodes(root.getLeft()) + numberOfHalfNodes(root.getRight());
@@ -27,8 +26,7 @@ public class HalfAndFullNodesInBinaryTree {
 
         int count = 0;
 
-        if (root.getLeft() != null && root.getRight() != null)
-        {
+        if (root.getLeft() != null && root.getRight() != null) {
             count++;
         }
         return count + numberOfFullNodes(root.getLeft()) + numberOfFullNodes(root.getRight());
